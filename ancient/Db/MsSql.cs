@@ -17,6 +17,7 @@ namespace ancient.Db
         /// </summary>
         public static string Con = @"Data Source=YOURDBSERVER;Initial Catalog=YOURDBNAME;User ID=YOURDBUSER;Password=YOURDBPASSWORD";
 
+
         /// <summary>
         /// Method to execute sql script with or without parameters
         /// </summary>

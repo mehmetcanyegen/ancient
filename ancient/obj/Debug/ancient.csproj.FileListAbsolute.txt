@@ -1,0 +1,4 @@
+D:\Proje\ancient\ancient\bin\Debug\ancient.pdb
+D:\Proje\ancient\ancient\obj\Debug\ancient.csprojResolveAssemblyReference.cache
+D:\Proje\ancient\ancient\obj\Debug\ancient.dll
+D:\Proje\ancient\ancient\obj\Debug\ancient.pdb
