@@ -26,6 +26,12 @@ namespace ancient.Db
             }
         }
 
+        /// <summary>
+        /// Method to execute and read sqlscript
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="spr"></param>
+        /// <returns></returns>
         public SqlDataReader ExDr(string sql, SqlParameter[] spr = null)
         {
             var con = new SqlConnection(Con);
