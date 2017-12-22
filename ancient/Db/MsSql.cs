@@ -11,8 +11,17 @@ namespace ancient.Db
     class MsSql
     {
 
-        public static string Con = "";
+        /// <summary>
+        /// Sql connection string.
+        /// Set this with yours
+        /// </summary>
+        public static string Con = @"Data Source=YOURDBSERVER;Initial Catalog=YOURDBNAME;User ID=YOURDBUSER;Password=YOURDBPASSWORD";
 
+        /// <summary>
+        /// Method to execute sql script with or without parameters
+        /// </summary>
+        /// <param name="sql">sql script to be executed</param>
+        /// <param name="spr">sql parameters</param>
         public void Ex(string sql, SqlParameter[] spr = null)
         {
             using (var con = new SqlConnection(Con))
@@ -27,10 +36,10 @@ namespace ancient.Db
         }
 
         /// <summary>
-        /// Method to execute and read sqlscript
+        /// Method to execute and read sqlscript with or without parameters
         /// </summary>
-        /// <param name="sql"></param>
-        /// <param name="spr"></param>
+        /// <param name="sql">sql script to be executed</param>
+        /// <param name="spr">sql parameters</param>
         /// <returns></returns>
         public SqlDataReader ExDr(string sql, SqlParameter[] spr = null)
         {
