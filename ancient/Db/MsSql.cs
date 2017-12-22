@@ -36,6 +36,26 @@ namespace ancient.Db
             }
         }
 
+   
+        /// <summary>
+        /// Use it to get only one row and one column information 
+        /// after executing sql script
+        /// </summary>
+        /// <param name="sql">sql script</param>
+        /// <param name="spr">sql parameters</param>
+        /// <returns></returns>
+        public object ExSc(string sql, SqlParameter[] spr = null)
+        {
+            var con = new SqlConnection(Con);
+            con.Open();
+            var cmd = new SqlCommand(sql, con);
+            if (spr != null)
+                cmd.Parameters.AddRange(spr);
+            var obj = cmd.ExecuteScalar();
+            con.Close();
+            return obj;
+        }
+
         /// <summary>
         /// Method to execute and read sqlscript with or without parameters
         /// </summary>
