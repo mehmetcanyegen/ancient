@@ -1,0 +1,10 @@
+D:\Proje\ancient\ancient-sample\bin\Debug\ancient-sample.exe.config
+D:\Proje\ancient\ancient-sample\bin\Debug\ancient-sample.exe
+D:\Proje\ancient\ancient-sample\bin\Debug\ancient-sample.pdb
+D:\Proje\ancient\ancient-sample\bin\Debug\ancient.dll
+D:\Proje\ancient\ancient-sample\bin\Debug\ancient.pdb
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.csprojResolveAssemblyReference.cache
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient_sample.Properties.Resources.resources
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.csproj.GenerateResource.Cache
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.exe
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.pdb
