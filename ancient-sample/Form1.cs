@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ancient.Ctr;
 
 namespace ancient_sample
 {
@@ -21,6 +22,11 @@ namespace ancient_sample
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateChooser1_ValueChanged(object sender, EventArgs e)
+        {
+            label1.Text =  dateChooser1.DateTimeValue.ToShortDateString();
         }
     }
 }

@@ -3,3 +3,6 @@ D:\Proje\ancient\ancient\obj\Debug\ancient.csprojResolveAssemblyReference.cache
 D:\Proje\ancient\ancient\obj\Debug\ancient.dll
 D:\Proje\ancient\ancient\obj\Debug\ancient.pdb
 D:\Proje\ancient\ancient\bin\Debug\ancient.dll
+D:\Proje\ancient\ancient\obj\Debug\ancient.Ctr.DateChooser.resources
+D:\Proje\ancient\ancient\obj\Debug\ancient.Properties.Resources.resources
+D:\Proje\ancient\ancient\obj\Debug\ancient.csproj.GenerateResource.Cache
