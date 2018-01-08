@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -130,6 +131,28 @@ namespace ancient
                 return DBNull.Value;
         }
 
+        public static void SendMail(String receiver, String subject, String content, int port = 587, bool ishtml = true)
+        {
+            try
+            {
+                var mail = new MailMessage { IsBodyHtml = ishtml };
+                using (var smtpServer = new SmtpClient("yourmailserver.com"))
+                {
+                    mail.From = new MailAddress("yourmailaddress.sample.com");
+                    mail.To.Add(receiver);
+                    mail.Subject = subject;
+                    mail.Body = content;
+                    smtpServer.Port = port;
+                    smtpServer.Credentials = new System.Net.NetworkCredential("yourmailusername@sample.com", "yourmailpassword");
+                    smtpServer.Send(mail);
+                }
+            }
+            catch (Exception ex)
+            {
+                // ignored
+            }
+        }
+
         public static byte[] StringToByteArray(String hex)
         {
             var NumberChars = hex.Length;
@@ -179,6 +202,5 @@ namespace ancient
             }
             return sb.ToString();
         }
-
     }
 }
