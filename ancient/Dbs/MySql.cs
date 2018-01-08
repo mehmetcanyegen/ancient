@@ -10,13 +10,13 @@ namespace ancient.Dbs
 
         public static string Con = "Server=YOURSERVERIP;Port=YOURPORT;Database=YOURDBNAME;Uid=YOURDBUSERNAME;Pwd=YOURDBPW; pooling=fals";
 
-        public static SqlDataReader Exdr(string sql)
+        public static MySqlDataReader Exdr(string sql)
         {
-            SqlDataReader dtr = null;
-            var con = new SqlConnection(Con);
+            MySqlDataReader dtr = null;
+            var con = new MySqlConnection(Con);
             try
             {
-                var cmd = new SqlCommand(sql, con);
+                var cmd = new MySqlCommand(sql, con);
                 con.Open();
                 dtr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
