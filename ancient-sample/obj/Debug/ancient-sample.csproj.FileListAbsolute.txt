@@ -8,3 +8,4 @@ D:\Proje\ancient\ancient-sample\obj\Debug\ancient_sample.Properties.Resources.re
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.csproj.GenerateResource.Cache
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.exe
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.pdb
+D:\Proje\ancient\ancient-sample\obj\Debug\ancient_sample.Form1.resources

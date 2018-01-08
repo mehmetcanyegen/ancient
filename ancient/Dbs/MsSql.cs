@@ -36,6 +36,27 @@ namespace ancient.Db
             }
         }
 
+        /// <summary>
+        /// Execute sql script and get result as DataTable
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="spr"></param>
+        /// <returns></returns>
+        public static DataTable Dt(string sql, SqlParameter[] spr = null)
+        {
+            DataTable dt;
+            using (var _con = new SqlConnection(Con))
+            {
+                _con.Open();
+                var da = new SqlDataAdapter(sql, _con);
+                if (spr != null)
+                    da.SelectCommand.Parameters.AddRange(spr);
+                dt = new DataTable();
+                da.Fill(dt);
+                _con.Close();
+            }
+            return dt;
+        }
    
         /// <summary>
         /// Use it to get only one row and one column information 
