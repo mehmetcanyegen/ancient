@@ -29,7 +29,7 @@ namespace ancient.Db
 
         public int ExsId(string sql, SqlCeParameter[] spr = null)
         {
-            var result = -1;
+            int result;
             using (var con = new SqlCeConnection(Con))
             {
                 con.Open();
@@ -46,29 +46,27 @@ namespace ancient.Db
 
         public SqlCeDataReader Exdr(string sql, SqlCeParameter[] spr = null)
         {
-            SqlCeCommand cmd = null;
             var con = new SqlCeConnection(Con);
-            SqlCeDataReader dtr = null;
             var selectString = sql;
-            cmd = new SqlCeCommand(selectString, con);
+            var cmd = new SqlCeCommand(selectString, con);
             con.Open();
             if (spr != null)
                 cmd.Parameters.AddRange(spr);
-            dtr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            var dtr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             return dtr;
         }
 
         public object Exs(string sql, SqlCeParameter[] spr = null)
         {
             object obj;
-            using (var _con = new SqlCeConnection(Con))
+            using (var con = new SqlCeConnection(Con))
             {
-                _con.Open();
-                var cmd = new SqlCeCommand(sql, _con);
+                con.Open();
+                var cmd = new SqlCeCommand(sql, con);
                 if (spr != null)
                     cmd.Parameters.AddRange(spr);
                 obj = cmd.ExecuteScalar();
-                _con.Close();
+                con.Close();
             }
             return obj;
         }

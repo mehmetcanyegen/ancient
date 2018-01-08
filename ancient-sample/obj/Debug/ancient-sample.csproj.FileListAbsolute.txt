@@ -9,3 +9,4 @@ D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.csproj.GenerateResource
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.exe
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient-sample.pdb
 D:\Proje\ancient\ancient-sample\obj\Debug\ancient_sample.Form1.resources
+D:\Proje\ancient\ancient-sample\bin\Debug\MySql.Data.dll
